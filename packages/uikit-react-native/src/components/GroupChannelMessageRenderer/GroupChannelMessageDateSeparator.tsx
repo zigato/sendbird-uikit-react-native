@@ -1,4 +1,5 @@
-import isSameDay from 'date-fns/isSameDay';
+// import isSameDay from 'date-fns/isSameDay';
+import * as dateFns from 'date-fns';
 import React from 'react';
 import { View } from 'react-native';
 
@@ -17,7 +18,7 @@ const GroupChannelMessageDateSeparator = ({
   const { STRINGS } = useLocalization();
   const { colors } = useUIKitTheme();
 
-  const sameDay = isSameDay(message.createdAt, prevMessage?.createdAt ?? 0);
+  const sameDay = dateFns?.isSameDay(message.createdAt, prevMessage?.createdAt ?? 0);
   if (sameDay) return null;
 
   return (
