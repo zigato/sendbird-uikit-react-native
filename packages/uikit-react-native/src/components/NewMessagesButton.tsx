@@ -21,7 +21,7 @@ const NewMessagesButton = ({ newMessages, visible, onPress }: Props) => {
       onPress={onPress}
       style={[
         styles.container,
-        { backgroundColor: select({ dark: palette.background400, light: palette.background50 }) },
+        { backgroundColor: select({ dark: 'red', light: 'yellow' }) },
       ]}
     >
       <Text button color={colors.primary}>
