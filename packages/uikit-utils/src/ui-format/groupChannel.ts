@@ -19,7 +19,7 @@ export const getGroupChannelTitle = (
 };
 
 export const getGroupChannelPreviewTime = (channel: SendbirdGroupChannel, locale?: Locale) => {
-  return getMessagePreviewTime(channel.lastMessage?.createdAt || channel.joinedAt * 1000 || channel.createdAt, locale.enUS);
+  return getMessagePreviewTime(channel.lastMessage?.createdAt || channel.joinedAt * 1000 || channel.createdAt, locale);
 };
 
 export const getGroupChannelLastMessage = (channel: SendbirdGroupChannel, EMPTY_MESSAGE = '') => {
